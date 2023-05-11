@@ -165,7 +165,7 @@ def schnorr():
     R = scalar_mult(nonce_r, curve.g)
     Message = "Serhas"
 
-    #Concatenats R value and message, then calculates hash of them e and s value
+    #Concatenates R value and message, then calculates hash of them e and s value
     e = hash_this(R, Message)
     s = (e * alice_private_key) + nonce_r
 
